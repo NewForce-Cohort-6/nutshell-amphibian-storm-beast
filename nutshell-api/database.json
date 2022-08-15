@@ -1,0 +1,85 @@
+{
+    "users": [
+        { 
+            "id": 1,
+            "fullName": "Larry Loofa",
+            "email": "larry@hotmail.com"
+        },
+        { 
+            "id": 2,
+            "fullName": "Howard Stern",
+            "email": "stern@live.com"
+        },
+        { 
+            "id": 3,
+            "fullName": "Frank Sinatra",
+            "email": "sinatra@yahoo.com"
+        },
+        { 
+            "id": 4,
+            "fullName": "Patrick Terry",
+            "email": "terry@gmail.com"
+        }
+    ],
+
+    "articles": [
+        {
+            "id": 1,
+            "articleName": "",
+            "synopsis": "",
+            "URL": "",
+            "userId": 1
+        }
+    ],
+    
+    "events": [
+        {
+            "id": 1,
+            "eventName": "Hot Dog Festival",
+            "eventDate": "",
+            "location": "Huntington",
+            "userId": 1
+        },
+        {
+            "id": 2,
+            "eventName": "River Rafting Extravaganza",
+            "eventDate": "",
+            "location": "Summersville",
+            "userId": 1
+        },
+        {
+            "id": 3,
+            "eventName": "Train Days",
+            "eventDate": "",
+            "location": "Beckley",
+            "userId": 1
+        },
+        {
+            "id": 4,
+            "eventName": "",
+            "eventDate": "",
+            "location": "",
+            "userId": 1
+        }
+    ],
+
+    "tasks": [
+        {
+            "id": 1,
+            "userId": 1, 
+            "taskName": "",
+            "completionDate": "",
+            "completed": false
+        }
+    ],
+
+    "messages": [
+        {
+            "id": 1,
+            "userId": 1,
+            "messageTitle": "",
+            "content": "",
+            "messageDate": ""
+        }
+    ]
+}
