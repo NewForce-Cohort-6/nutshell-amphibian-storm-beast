@@ -1,75 +1,45 @@
-#root .mainContainer{
-    transform:translatex(576px) translatey(78px);
-    width:24%;
-    height:514px;
-    border-width:2px !important;
-    border-color:#2c3e50;
-    border-top-width:6px;
-    border-top-style:none !important;
-    border-style:solid !important;
+/* Division */
+#root .mainContainer > div{
+    border-color:#000000;
+    border-style:solid;
+    border-width:1px;
+    transform:translatex(0px) translatey(0px);
+    padding-left:92px;
+    padding-right:116px;
+    padding-top:22px;
    }
    
-   /* Button */
-   #root .chatForm .btn-primary{
-    transform:translatex(408px) translatey(-112px);
-    min-height:35px;
-    width:49px;
-    border-top-left-radius:7px;
-    border-top-right-radius:7px;
-    border-bottom-left-radius:7px;
-    border-bottom-right-radius:7px;
+   /* Heading */
+   .mainContainer div h2{
+    text-align:center;
+    transform:translatex(0px) translatey(0px);
+    color:#69d7d7;
    }
    
    /* Input */
    .chatForm fieldset input[type=text]{
-    height:17px;
-    width:368px;
-    box-shadow:0px 0px 3px 3px #495057;
-    transform:translatex(4px) translatey(7px);
+    transform:translatex(334px) translatey(-33px);
+    box-shadow:0px 0px 2px 0px #495057;
+    height:23px;
    }
    
-   /* Form group */
-   .chatForm fieldset .form-group{
-    border-color:#0a0909;
-    border-width:7px;
-    margin-bottom:19px;
+   /* Button */
+   .chatForm fieldset .btn-primary{
+    transform:translatex(435px) translatey(-33px);
+    position:relative;
+    bottom:-4px;
+    box-shadow:0px 0px 3px 0px #000000;
+   }
+   .scroller {
+    width: 423px;
+    height: 179px;
+    overflow-y: scroll;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
+  }
+  /* Input */
+.chatForm fieldset input[type=text]{
+    transform:translatex(0px) translatey(0px);
    }
    
-   /* Heading */
-   #root h2{
-    color:#5ec3b9;
-   }
-   /* Import Google Fonts */
-@import url("//fonts.googleapis.com/css2?family=Marvel:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
-
-/* Button */
-.chatForm fieldset .btn-primary{
- transform:translatex(408px) translatey(-27px) !important;
-}
-
-/* Form group */
-.chatForm fieldset .form-group{
- transform:translatex(0px) translatey(192px);
-}
-
-/* Division */
-.messages .message div{
- font-family:'Marvel', sans-serif;
-}
-
-/* Heading */
-#root h2{
- font-family:'Marvel', sans-serif;
- text-align:center;
- font-size:25px;
- font-weight:700;
- text-shadow:rgb(0, 0, 0) 0px 1px 1px, rgb(0, 0, 0) 0px -1px 1px, rgb(0, 0, 0) 1px 0px 1px, rgb(0, 0, 0) -1px 0px 1px;
- word-spacing:0.5px;
- letter-spacing:1.5px;
- column-count:1;
- font-style:normal;
- line-height:15.6px;
-}
-.messages {
-    border: 1px solid black;
-}
+   

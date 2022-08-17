@@ -1,32 +1,46 @@
 import { Outlet, Route, Routes } from "react-router-dom"
-// import { EventList } from "../event/EventList"
-// import { ArticleList } from "../article/ArticleList"
-import { Chat } from "../chat/Chat"
 import { ChatList } from "../chat/ChatList"
-//import { Chat } from "Chat.js"
-//import { TaskList } from "../task/TaskList"
+import { ArticleForm } from "../articles/ArticleForm"
+import { ArticleList } from "../articles/ArticleList"
+
 
 export const ApplicationViews = () => {
 
-    return <>
-            <Routes>
-                {<Route path="/" element={
+    return <Routes>
+                <Route path="/" element={
                     <>
                         <h1>Nutshell</h1>
-                        
 
                         <section className="mainContainer">
-                            {/* <ArticleList /> */}
-                            {/* <TaskList /> */}
-                            <ChatList />
-                            {/* <EventList /> */}
+                            <div className ="news">
+                                <h2>News</h2>
+                                <ArticleList />
+                            </div>
+                            <div>
+                                <h2>Tasks</h2>
+
+                            </div>
+                            <div>
+                                <h2>Events</h2>
+
+                            </div>
+                            <div>
+                                <h2>Messages</h2>
+                                <ChatList />
+                            </div>
+                            
+                
                         </section>
+
 
                         <Outlet />
                     </>
-                }>
-                    {/* <Route path="locations" element={ <Locations /> } /> */}          
-                </Route>}
-            </Routes>
-        </>
+                }/>
+                <Route path = "article/create" element={<ArticleForm />} />
+                 
+                
+               
+    </Routes>
+        
+
 }

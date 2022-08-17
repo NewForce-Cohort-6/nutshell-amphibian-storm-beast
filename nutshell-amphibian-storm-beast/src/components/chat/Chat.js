@@ -49,7 +49,6 @@ export const Chat = ({reFresh}) => {
         <form className="chatForm">
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="description">Description:</label>
                     <input
                         required autoFocus
                         type="text"
