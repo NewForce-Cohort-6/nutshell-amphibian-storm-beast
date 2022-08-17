@@ -1,0 +1,26 @@
+footer {
+    font-weight: 600;
+    border-top: dotted 1px ;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: flex-end;
+    justify-content: space-between;  
+}
+
+.article__delete {
+    margin-left: auto;
+    background-color: lightcoral;
+}
+
+.articles{
+    display: flex;
+    flex-direction: column;
+}
+
+.article{
+    background-color: #a0cecb;
+    border: 2px dotted #7db1b1;
+    padding: 0.7rem;
+    margin: 0.5rem 0;
+    color: black
+}
