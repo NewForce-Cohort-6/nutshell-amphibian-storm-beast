@@ -1,0 +1,17 @@
+.events {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.event {
+    background-color: rgb(243,230,255);
+    border: 1px dotted darkmagenta;
+    padding: 1rem;
+    margin: .5rem 0rem;
+}
+
+.eventsSection {
+    width: 75%;
+    margin: auto;
+}

@@ -1,20 +1,25 @@
 import { Outlet, Route, Routes } from "react-router-dom"
+import { EventList } from "../events/EventList"
+import { EventForm } from "../events/EventForm"
 
 export const ApplicationViews = () => {
 
-    return <>
-            <Routes>
-                {<Route path="/" element={
+    return <Routes>
+                <Route path="/" element={
                     <>
                         <h1>Nutshell</h1>
 
+                        <section className="mainContainer">
+                            {/* <ArticleList />
+                            <TaskList />
+                            <Chat /> */}
+                            <EventList />
+                        </section>
+
                         <Outlet />
                     </>
-                }>
-                    {/* <Route path="locations" element={ <Locations /> } />
-                    <Route path="products" element={ <ProductContainer /> } />
-                    <Route path="product/create" element={ <ProductForm /> } />  */}                
-                </Route>}
+                }/>
+                <Route path="event/create" element={ <EventForm /> } />  
             </Routes>
-        </>
+        
 }
