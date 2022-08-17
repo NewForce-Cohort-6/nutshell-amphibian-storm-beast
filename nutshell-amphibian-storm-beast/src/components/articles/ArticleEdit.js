@@ -19,7 +19,7 @@ export const ArticleEdit = () => {
             })
     }, [articleId])
 
-    const saveButtonClick = (clickEvent) => {
+    const editButtonClick = (clickEvent) => {
         clickEvent.preventDefault()
 
         return fetch(`http://localhost:8088/articles/${article.id}`, {
@@ -31,7 +31,71 @@ export const ArticleEdit = () => {
         })
         .then(response => response.json())
         .then(() => {
-            navigate("/articles")
+            navigate("/")
         })
     }
+    return (
+        <form className="articleForm">
+            <h2 className="articleForm__title">New Article</h2>
+            <fieldset>
+                <div className="">
+                <label htmlFor="synopsis">Article Name:</label>
+                    <input
+                    required autoFocus
+                    type="text"
+                    className="form-control"
+                    placeholder="Name of article"
+                    value={article.articleName}
+                    onChange={
+                        (evt)=> {
+                            const copy = {...article}
+                            copy.articleName = evt.target.value
+                            assignArticle(copy)
+                        }
+                    } />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="synopsis">Synopsis:</label>
+                    <input
+                    required autoFocus
+                    type="text"
+                    className="form-control"
+                    placeholder="Brief description of article"
+                    value={article.synopsis}
+                    onChange={
+                        (evt)=> {
+                            const copy = {...article}
+                            copy.synopsis = evt.target.value
+                            assignArticle(copy)
+                        }
+                    } />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="URL">URL:</label>
+                    <input
+                    required autoFocus
+                    type="text"
+                    className="form-control"
+                    placeholder="Enter URL"
+                    value={article.URL}
+                    onChange={
+                        (evt)=> {
+                            const copy = {...article}
+                            copy.URL = evt.target.value
+                            assignArticle(copy)
+                        }
+                    } />
+                    </div>
+            </fieldset>
+            <button 
+                onClick={(clickEvent)=> editButtonClick(clickEvent)}
+                className="btn btn-primary">
+                Save Edits
+            </button>
+        </form>
+    )
 }

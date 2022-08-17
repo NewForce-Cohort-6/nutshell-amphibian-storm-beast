@@ -1,4 +1,5 @@
 import { Outlet, Route, Routes } from "react-router-dom"
+import { ArticleEdit } from "../articles/ArticleEdit"
 import { ArticleForm } from "../articles/ArticleForm"
 import { ArticleList } from "../articles/ArticleList"
 
@@ -7,7 +8,7 @@ export const ApplicationViews = () => {
     return <Routes>
                 <Route path="/" element={
                     <>
-                        <h1>Nutshell</h1>
+                        <h1 className="mainTitle">Nutshell</h1>
                         <section className="mainContainer">
                             <div className ="news">
                                 <h2>News</h2>
@@ -34,6 +35,7 @@ export const ApplicationViews = () => {
                     </>
                 }/>
                 <Route path = "article/create" element={<ArticleForm />} />
+                <Route path = "article/:articleId/edit" element= {<ArticleEdit />} />
                  
                 
                
