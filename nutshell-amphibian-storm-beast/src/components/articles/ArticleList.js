@@ -11,15 +11,26 @@ export const ArticleList = () => {
     const localNutshellUser = localStorage.getItem("nutshell_user")
     const nutshellUserObject = JSON.parse(localNutshellUser)
 
-    const getArticles =() => {
+    const getArticles = () => {
         fetch(`http://localhost:8088/articles`)
             .then(response => response.json())
-            .then((articleArray)=> {
+            .then((articleArray) => {
                 setArticles(articleArray)
             })
     }
+
     useEffect(
-        ()=> {
+        () => {
+            fetch(`http://localhost:8088/articles`)
+                .then(response => response.json())
+                .then((articleArray) => {
+                    setArticles(articleArray)
+                })
+        }, []
+    )
+
+    useEffect(
+        () => {
             getArticles()
             const myArticles = articles.filter(article => article.userId === nutshellUserObject.id)
             setFiltered(myArticles)
@@ -28,20 +39,20 @@ export const ArticleList = () => {
     )
 
     return <>
-    {
-        <button onClick={() => navigate("/article/create")}>New Article</button>
-            
-
-    }
-    <article className="articles">
         {
-            filteredArticles.map(
-                (article) => <Article key={article.id}
-                getArticles={getArticles}
-                currentUser= {nutshellUserObject}
-                articleObject = {article} />
-            )
+            <button onClick={() => navigate("/article/create")}>New Article</button>
+
+
         }
-    </article>
+        <article className="articles">
+            {
+                filteredArticles.map(
+                    (article) => <Article key={article.id}
+                        getArticles={getArticles}
+                        currentUser={nutshellUserObject}
+                        articleObject={article} />
+                )
+            }
+        </article>
     </>
 }
