@@ -1,0 +1,11 @@
+.tasks {
+    display: flex;
+    flex-direction: column;
+}
+
+.task {
+    background-color: lightgray;
+    border: 1px solid black;
+    padding: 0.7 rem;
+    margin: 0.5rem 0;
+}
