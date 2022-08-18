@@ -41,5 +41,13 @@
 .chatForm fieldset input[type=text]{
     transform:translatex(0px) translatey(0px);
    }
-   
+   /* Span Tag */
+.messages div span{
+  font-size:10px;
+  line-height:21.7px;
+  word-spacing:0.2px;
+  column-count:1;
+  padding-left:12px;
+  font-style:italic;
+ }
    

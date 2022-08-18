@@ -24,7 +24,12 @@ return<>
         messages.map(
             (message) => {
                 return <section className="message">
-                    <div>{message?.user?.userId}{message.content}{message?.user?.fullName}</div>
+                    <div>{message?.user?.userId}{message.content}
+                    <span className="whitespace">
+                        {message?.user?.fullName}</span>
+                        {/* <Link to={`/chats/${chat.id}/edit`}>Edit</Link> */}
+                        
+                        </div>
                 </section>
             }
         )
@@ -33,6 +38,8 @@ return<>
     </div>
     </article>
     <Chat reFresh={setMessages} />
+    
+    
 
 </div>
 
@@ -40,3 +47,4 @@ return<>
 }
 
 //change fetch call to embed user and reference user
+//inline editing

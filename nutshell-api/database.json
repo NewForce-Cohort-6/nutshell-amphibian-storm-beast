@@ -102,12 +102,6 @@
       "userId": 4,
       "content": "This is message 2.  Hope we get our messages to print out.",
       "messageDate": "08-16-2022"
-    },
-    {
-      "userId": 1,
-      "content": "test",
-      "messageDate": "",
-      "id": 3
     }
   ]
 }
