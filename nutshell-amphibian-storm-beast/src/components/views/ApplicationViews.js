@@ -6,8 +6,6 @@ import { ChatList } from "../chat/ChatList"
 import { ArticleEdit } from "../articles/ArticleEdit"
 import { ArticleForm } from "../articles/ArticleForm"
 import { ArticleList } from "../articles/ArticleList"
-import { ArticleEdit } from "../articles/ArticleEdit"
-
 
 
 export const ApplicationViews = () => {
