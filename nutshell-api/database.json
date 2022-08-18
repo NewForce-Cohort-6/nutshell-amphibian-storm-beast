@@ -48,7 +48,7 @@
     {
       "id": 1,
       "eventName": "Hot Dog Festival",
-      "eventDate": "09/28/2022",
+      "eventDate": "1664377945",
       "location": "Huntington",
       "userId": 1,
       "next": false
@@ -56,7 +56,7 @@
     {
       "id": 2,
       "eventName": "River Rafting Extravaganza",
-      "eventDate": "10/04/2022",
+      "eventDate": "1664896345",
       "location": "Summersville",
       "userId": 3,
       "next": false
@@ -64,7 +64,7 @@
     {
       "id": 3,
       "eventName": "Train Days",
-      "eventDate": "11/11/2022",
+      "eventDate": "1668183145",
       "location": "Beckley",
       "userId": 4,
       "next": false
@@ -72,7 +72,7 @@
     {
       "id": 4,
       "eventName": "Bonnaroo",
-      "eventDate": "06/18/2023",
+      "eventDate": "1685632345",
       "location": "Manchester",
       "userId": 2,
       "next": false
@@ -80,15 +80,14 @@
     {
       "userId": 1,
       "eventName": "Meeting",
-      "eventDate": "01/02/2023",
-      "location": "Zoom",
-      "id": 6,
-      "next": false
+      "eventDate": "05/05/2025",
+      "location": "on zoom",
+      "id": 6
     },
     {
       "userId": 1,
       "eventName": "Meeting 2",
-      "eventDate": "01/22/2023",
+      "eventDate": "1674403945",
       "location": "Via Zoom",
       "id": 7,
       "next": false
@@ -96,42 +95,16 @@
     {
       "userId": 1,
       "eventName": "new event",
-      "eventDate": "01/02/2024",
+      "eventDate": "01/23/2025",
       "location": "asdfasdf",
-      "id": 8,
-      "next": false
+      "id": 8
     },
     {
       "userId": 1,
-      "eventName": "new new event",
-      "eventDate": "02/02/2023",
-      "location": "zoom",
-      "id": 9,
-      "next": false
-    },
-    {
-      "userId": 1,
-      "eventName": "sadfsdf",
+      "eventName": "Conference",
       "eventDate": "01/02/2025",
-      "location": "asdfasdf",
-      "id": 10,
-      "next": false
-    },
-    {
-      "userId": 1,
-      "eventName": "adfasdf",
-      "eventDate": "01/02/2026",
-      "location": "asdfasdf",
-      "id": 11,
-      "next": false
-    },
-    {
-      "userId": 1,
-      "eventName": "new new",
-      "eventDate": "02/03/2023",
-      "location": "zoom",
-      "id": 12,
-      "next": false
+      "location": "Convention Center",
+      "id": 9
     }
   ],
   "tasks": [
