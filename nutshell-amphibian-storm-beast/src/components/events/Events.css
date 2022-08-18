@@ -1,0 +1,24 @@
+.events {
+    display: flex;
+    flex-flow: column;
+    margin: 3% 0 0 0;
+}
+
+.event {
+    background-color: rgb(243,230,255);
+    border: 1px dotted darkmagenta;
+    padding: 1rem;
+    margin: .5rem 0rem;
+}
+.nextEvent {
+    background-color: rgb(195, 149, 237);
+    border: 1px dotted darkmagenta;
+    padding: 1rem;
+    margin: .5rem 0rem;
+    transform:scale(1.10);
+}
+
+.eventsSection {
+    width: 100%;
+    margin: auto;
+}

@@ -21,20 +21,21 @@ export const ArticleList = () => {
     
     useEffect(
         () => {
-            fetch (`http://localhost:8088/articles`)
-                .then(response => response.json())
-                .then((articleArray)=>{
-                    setArticles(articleArray)
-                })
-        }, [])
+        fetch(`http://localhost:8088/articles`)
+            .then(response => response.json())
+            .then((articleArray)=> {
+                setArticles(articleArray)
+            })
+        },[]
+    )
 
-        useEffect(
-            ()=> {
-                const myArticles = articles.filter(article => article.userId === nutshellUserObject.id)
-                    setFiltered(myArticles)
-            },
-            [articles]
-        )
+    useEffect(
+        ()=> {
+            const myArticles = articles.filter(article => article.userId === nutshellUserObject.id)
+                setFiltered(myArticles)
+        },
+        [articles]
+    )
 
     return <>
     {
