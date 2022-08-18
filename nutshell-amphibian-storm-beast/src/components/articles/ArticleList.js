@@ -31,7 +31,6 @@ export const ArticleList = () => {
 
     useEffect(
         () => {
-            getArticles()
             const myArticles = articles.filter(article => article.userId === nutshellUserObject.id)
             setFiltered(myArticles)
         },

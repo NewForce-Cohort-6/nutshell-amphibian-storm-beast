@@ -8,7 +8,8 @@ export const TaskForm = () => {
     */
     const [task, updateTask] = useState({
         taskName: "",
-        dueDate: ""
+        dueDate: "",
+        completed: true/false
     })
     /*
         TODO: Use the useNavigation() hook so you can redirect
