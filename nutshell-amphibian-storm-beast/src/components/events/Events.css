@@ -1,7 +1,7 @@
 .events {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+    flex-flow: column;
+    margin: 3% 0 0 0;
 }
 
 .event {
@@ -10,8 +10,15 @@
     padding: 1rem;
     margin: .5rem 0rem;
 }
+.nextEvent {
+    background-color: rgb(195, 149, 237);
+    border: 1px dotted darkmagenta;
+    padding: 1rem;
+    margin: .5rem 0rem;
+    transform:scale(1.10);
+}
 
 .eventsSection {
-    width: 75%;
+    width: 100%;
     margin: auto;
 }

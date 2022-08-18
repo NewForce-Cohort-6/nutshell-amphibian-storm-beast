@@ -17,7 +17,10 @@ export const EventList = () => {
         () => {fetch('http://localhost:8088/events')
                 .then(response => response.json())
                 .then(eventsArray => {
-                    setEvents(eventsArray)
+                    const sortedEvents = eventsArray.sort(sortByDate)
+                    let nextEvent = sortedEvents[0]
+                    nextEvent.next = true
+                    setEvents(sortedEvents)
                 })
         },[]
     )
@@ -30,37 +33,24 @@ export const EventList = () => {
         })
     }
 
-    let markedEvents = []
-
     useEffect(
         () => {
             const myEvents = events.filter(event => event.userId === userObject.id)
             setFilteredEvents(myEvents)
-            markedEvents = markNextEvent(filteredEvents)
         }, [events]
     )
 
     const sortByDate = (a,b) => {
-        const date1 = new Date(a)
-        const date2 = new Date(b)
-        
-        return date1 - date2;
-    }
-
-    function markNextEvent(events) {
-        const sortedEvents = events.sort(sortByDate)
-        let nextEvent = sortedEvents[0]
-        nextEvent.next = true
+        return a - b;
     }
 
     
 
     return <div className="eventsSection">
-        <h2>Events</h2>
         <button onClick={() => { navigate("/event/create")}}>New Event</button>
         <article className="events">
             {
-                markedEvents.map(event => <Event key={event.id} event={event} getAllEvents={getAllEvents}/>)
+                filteredEvents.map(event => <Event key={event.id} event={event} getAllEvents={getAllEvents}/>)
             }
         </article>
     </div>

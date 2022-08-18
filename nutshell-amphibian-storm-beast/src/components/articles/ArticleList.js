@@ -18,9 +18,19 @@ export const ArticleList = () => {
                 setArticles(articleArray)
             })
     }
+
+    useEffect(
+        () => {
+        fetch(`http://localhost:8088/articles`)
+            .then(response => response.json())
+            .then((articleArray)=> {
+                setArticles(articleArray)
+            })
+        },[]
+    )
+
     useEffect(
         ()=> {
-            getArticles()
             const myArticles = articles.filter(article => article.userId === nutshellUserObject.id)
             setFiltered(myArticles)
         },

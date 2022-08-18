@@ -1,6 +1,7 @@
 import { Outlet, Route, Routes } from "react-router-dom"
 
 import { EventList } from "../events/EventList"
+import { EventEdit } from "../events/EventEdit"
 import { EventForm } from "../events/EventForm"
 import { ArticleForm } from "../articles/ArticleForm"
 import { ArticleList } from "../articles/ArticleList"
@@ -23,7 +24,7 @@ export const ApplicationViews = () => {
                             </div>
                             <div>
                                 <h2>Events</h2>
-
+                                <EventList />
                             </div>
                             <div>
                                 <h2>Messages</h2>
@@ -33,18 +34,11 @@ export const ApplicationViews = () => {
                 
                         </section>
 
-
-                        <section className="mainContainer">
-                            {/* <ArticleList />
-                            <TaskList />
-                            <Chat /> */}
-                            <EventList />
-                        </section>
-
                         <Outlet />
                     </>
                 }/>
                 <Route path="event/create" element={ <EventForm /> } />  
-                <Route path = "article/create" element={<ArticleForm />} />          
+                <Route path = "article/create" element={<ArticleForm />} />  
+                <Route path="events/:eventId/edit" element={ <EventEdit /> } />       
     </Routes>        
 }
