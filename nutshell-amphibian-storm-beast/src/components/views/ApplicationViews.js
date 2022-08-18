@@ -1,13 +1,18 @@
 import { Outlet, Route, Routes } from "react-router-dom"
-import { ArticleEdit } from "../articles/ArticleEdit"
+import { ChatList } from "../chat/ChatList"
 import { ArticleForm } from "../articles/ArticleForm"
 import { ArticleList } from "../articles/ArticleList"
+import { ArticleEdit } from "../articles/ArticleEdit"
+
 
 export const ApplicationViews = () => {
 
     return <Routes>
                 <Route path="/" element={
                     <>
+
+                        <h1>Nutshell</h1>
+
                         <h1 className="mainTitle">Nutshell</h1>
                         <section className="mainContainer">
                             <div className ="news">
@@ -24,7 +29,7 @@ export const ApplicationViews = () => {
                             </div>
                             <div>
                                 <h2>Messages</h2>
-
+                                <ChatList />
                             </div>
                             
                 
@@ -41,4 +46,5 @@ export const ApplicationViews = () => {
                
     </Routes>
         
+
 }
