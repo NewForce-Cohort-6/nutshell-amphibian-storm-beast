@@ -18,12 +18,12 @@ return<>
 <h2>Chat</h2>
 <div className="container">
 <article className="messages">
-<div class="container pt-3">
-    <div class="scroller">
+<div className="container pt-3">
+    <div className="scroller">
     {
         messages.map(
             (message) => {
-                return <section className="message">
+                return <section className="message" key={`${message.id}`}>
                     <div>{message?.user?.userId}{message.content}
                     <span className="whitespace">
                         {message?.user?.fullName}</span>

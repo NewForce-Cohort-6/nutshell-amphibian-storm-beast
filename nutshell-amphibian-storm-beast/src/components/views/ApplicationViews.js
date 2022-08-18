@@ -5,6 +5,9 @@ import { ArticleList } from "../articles/ArticleList"
 import { ArticleEdit } from "../articles/ArticleEdit"
 import { TaskList } from "../tasks/TaskList.js"
 import { TaskForm } from "../tasks/TaskForm.js"
+import { EventList } from "../events/EventList"
+import { EventEdit } from "../events/EventEdit"
+import { EventForm } from "../events/EventForm"
 
 
 export const ApplicationViews = () => {
@@ -27,7 +30,7 @@ export const ApplicationViews = () => {
                     </div>
                     <div>
                         <h2>Events</h2>
-
+                        <EventList />
                     </div>
                     <div>
                         <h2>Messages</h2>
@@ -44,6 +47,7 @@ export const ApplicationViews = () => {
         <Route path="article/create" element={<ArticleForm />} />
         <Route path="article/:articleId/edit" element={<ArticleEdit />} />
         <Route path="task/create" element={<TaskForm />} />
+        <Route path="events/:eventId/edit" element={<EventEdit />} />
+        <Route path="event/create" element={<EventForm />} />
     </Routes>
-
 }
