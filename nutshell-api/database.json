@@ -86,21 +86,6 @@
     },
     {
       "userId": 1,
-      "eventName": "Meeting 2",
-      "eventDate": "1674403945",
-      "location": "Via Zoom",
-      "id": 7,
-      "next": false
-    },
-    {
-      "userId": 1,
-      "eventName": "new event",
-      "eventDate": "01/23/2025",
-      "location": "asdfasdf",
-      "id": 8
-    },
-    {
-      "userId": 1,
       "eventName": "Conference",
       "eventDate": "01/02/2025",
       "location": "Convention Center",
