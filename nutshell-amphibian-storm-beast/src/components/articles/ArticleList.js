@@ -37,6 +37,14 @@ export const ArticleList = () => {
         [articles]
     )
 
+    useEffect(
+        () => {
+            const myArticles = articles.filter(article => article.userId === nutshellUserObject.id)
+            setFiltered(myArticles)
+        },
+        [articles]
+    )
+
     return <>
         {
             <button onClick={() => navigate("/article/create")}>New Article</button>
