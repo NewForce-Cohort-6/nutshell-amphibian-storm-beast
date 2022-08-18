@@ -15,7 +15,7 @@ export const Nutshell = () => {
 		<Route path="*" element={
 			<Authorized>
 				<>
-					<NavBar />
+					<NavBar /><br></br>
 					<ApplicationViews />
 				</>
 			</Authorized>

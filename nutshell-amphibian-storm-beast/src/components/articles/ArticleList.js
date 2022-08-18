@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Article } from "./Article";
 import "./Articles.css"
 
@@ -32,7 +32,7 @@ export const ArticleList = () => {
     useEffect(
         ()=> {
             const myArticles = articles.filter(article => article.userId === nutshellUserObject.id)
-            setFiltered(myArticles)
+                setFiltered(myArticles)
         },
         [articles]
     )
