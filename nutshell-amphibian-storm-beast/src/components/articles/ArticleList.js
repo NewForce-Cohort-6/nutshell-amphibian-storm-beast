@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Article } from "./Article";
 import "./Articles.css"
 
@@ -40,7 +40,6 @@ export const ArticleList = () => {
     return <>
         {
             <button onClick={() => navigate("/article/create")}>New Article</button>
-
 
         }
         <article className="articles">
