@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Article } from "./Article";
 import "./Articles.css"
 
@@ -18,11 +18,20 @@ export const ArticleList = () => {
                 setArticles(articleArray)
             })
     }
+
+    useEffect(
+        () => {
+        fetch(`http://localhost:8088/articles`)
+            .then(response => response.json())
+            .then((articleArray)=> {
+                setArticles(articleArray)
+            })
+    }, [])
+
     useEffect(
         ()=> {
-            getArticles()
             const myArticles = articles.filter(article => article.userId === nutshellUserObject.id)
-            setFiltered(myArticles)
+                setFiltered(myArticles)
         },
         [articles]
     )
