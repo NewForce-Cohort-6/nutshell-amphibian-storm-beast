@@ -88,7 +88,6 @@
       "taskName": "Chicken Stretching",
       "dueDate": "12-25-1999",
       "completed": true
-<<<<<<< HEAD
     },
     {
       "userId": 3,
@@ -96,8 +95,6 @@
       "dueDate": "asap",
       "completed": null,
       "id": 4
-=======
->>>>>>> master
     }
   ],
   "messages": [
@@ -106,15 +103,12 @@
       "userId": 1,
       "content": "First message.  It's gonna work. I know it.",
       "messageDate": "08-15-2022"
-<<<<<<< HEAD
     },
     {
       "id": 2,
       "userId": 4,
       "content": "This is message 2.  Hope we get our messages to print out.",
       "messageDate": "08-16-2022"
-=======
->>>>>>> master
     }
   ]
 }
