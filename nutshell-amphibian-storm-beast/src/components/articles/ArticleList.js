@@ -18,7 +18,7 @@ export const ArticleList = () => {
                 setArticles(articleArray)
             })
     }
-
+    
     useEffect(
         () => {
         fetch(`http://localhost:8088/articles`)

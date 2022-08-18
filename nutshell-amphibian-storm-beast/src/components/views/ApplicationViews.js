@@ -2,9 +2,12 @@ import { Outlet, Route, Routes } from "react-router-dom"
 import { EventList } from "../events/EventList"
 import { EventEdit } from "../events/EventEdit"
 import { EventForm } from "../events/EventForm"
+import { ChatList } from "../chat/ChatList"
 import { ArticleEdit } from "../articles/ArticleEdit"
 import { ArticleForm } from "../articles/ArticleForm"
 import { ArticleList } from "../articles/ArticleList"
+import { ArticleEdit } from "../articles/ArticleEdit"
+
 
 
 export const ApplicationViews = () => {
@@ -12,6 +15,9 @@ export const ApplicationViews = () => {
     return <Routes>
                 <Route path="/" element={
                     <>
+
+                        <h1>Nutshell</h1>
+
                         <h1 className="mainTitle">Nutshell</h1>
                         <section className="mainContainer">
                             <div className ="news">
@@ -28,7 +34,7 @@ export const ApplicationViews = () => {
                             </div>
                             <div>
                                 <h2>Messages</h2>
-
+                                <ChatList />
                             </div>
                             
                 
@@ -41,9 +47,6 @@ export const ApplicationViews = () => {
                 <Route path="event/create" element={ <EventForm /> } />  
                 <Route path = "article/create" element={<ArticleForm />} />  
                 <Route path="events/:eventId/edit" element={ <EventEdit /> } />            
-                <Route path = "article/:articleId/edit" element= {<ArticleEdit />} />
-                 
-                
-               
+                <Route path = "article/:articleId/edit" element= {<ArticleEdit />} />     
     </Routes>
 }

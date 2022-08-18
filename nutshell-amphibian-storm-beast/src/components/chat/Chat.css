@@ -1,0 +1,53 @@
+/* Division */
+#root .mainContainer > div{
+    border-color:#000000;
+    border-style:solid;
+    border-width:1px;
+    transform:translatex(0px) translatey(0px);
+    padding-left:92px;
+    padding-right:116px;
+    padding-top:22px;
+   }
+   
+   /* Heading */
+   .mainContainer div h2{
+    text-align:center;
+    transform:translatex(0px) translatey(0px);
+    color:#69d7d7;
+   }
+   
+   /* Input */
+   .chatForm fieldset input[type=text]{
+    transform:translatex(334px) translatey(-33px);
+    box-shadow:0px 0px 2px 0px #495057;
+    height:23px;
+   }
+   
+   /* Button */
+   .chatForm fieldset .btn-primary{
+    transform:translatex(435px) translatey(-33px);
+    position:relative;
+    bottom:-4px;
+    box-shadow:0px 0px 3px 0px #000000;
+   }
+   .scroller {
+    width: 423px;
+    height: 179px;
+    overflow-y: scroll;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
+  }
+  /* Input */
+.chatForm fieldset input[type=text]{
+    transform:translatex(0px) translatey(0px);
+   }
+   /* Span Tag */
+.messages div span{
+  font-size:10px;
+  line-height:21.7px;
+  word-spacing:0.2px;
+  column-count:1;
+  padding-left:12px;
+  font-style:italic;
+ }
+   
