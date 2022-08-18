@@ -18,7 +18,6 @@ export const ArticleList = () => {
                 setArticles(articleArray)
             })
     }
-<<<<<<< HEAD
     
     useEffect(
         () => {
@@ -36,26 +35,6 @@ export const ArticleList = () => {
             },
             [articles]
         )
-    
-=======
-
-    useEffect(
-        () => {
-        fetch(`http://localhost:8088/articles`)
-            .then(response => response.json())
-            .then((articleArray)=> {
-                setArticles(articleArray)
-            })
-    }, [])
-
-    useEffect(
-        ()=> {
-            const myArticles = articles.filter(article => article.userId === nutshellUserObject.id)
-                setFiltered(myArticles)
-        },
-        [articles]
-    )
->>>>>>> 00f9e0e94525917c96fb3f2022ee088600fb5476
 
     return <>
     {
