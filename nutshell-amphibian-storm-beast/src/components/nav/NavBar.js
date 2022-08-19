@@ -10,7 +10,7 @@ export const NavBar = () => {
                 <Link className="navbar__link" to="" onClick={() => {
                     //sessionStorage.removeItem("activeUser")
                     localStorage.removeItem("nutshell_user")
-                    navigate("/", {replace: true})
+                    navigate("/", { replace: true })
                 }}>Logout</Link>
             </li>
         </ul>
