@@ -9,7 +9,7 @@ export const TaskForm = () => {
     const [task, updateTask] = useState({
         taskName: "",
         dueDate: "",
-        completed: true/false
+        completed: false
     })
     /*
         TODO: Use the useNavigation() hook so you can redirect
@@ -28,7 +28,7 @@ export const TaskForm = () => {
             userId: nutshellUserObject.id,
             taskName: task.taskName,
             dueDate: task.dueDate,
-            completed: true/false
+            completed: false
         }
 
         // TODO: Perform the fetch() to POST the object to the API
@@ -55,7 +55,7 @@ export const TaskForm = () => {
                         required autoFocus
                         type="text"
                         className="form-control"
-                        placeholder="Guess What Goes Here"
+                        placeholder="Enter Task"
                         value={task.taskName}
                         onChange={
                             (evt) => {
@@ -72,7 +72,7 @@ export const TaskForm = () => {
                     <input
                         type="task"
                         className="form-control"
-                        placeholder="You Know What Goes Here"
+                        placeholder="Enter Date"
                         value={task.dueDate}
                         onChange={
                             (evt) => {

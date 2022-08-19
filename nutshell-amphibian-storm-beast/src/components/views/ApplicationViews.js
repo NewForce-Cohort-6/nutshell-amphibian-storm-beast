@@ -15,9 +15,6 @@ export const ApplicationViews = () => {
     return <Routes>
         <Route path="/" element={
             <>
-
-                <h1>Nutshell</h1>
-
                 <h1 className="mainTitle">Nutshell</h1>
                 <section className="mainContainer">
                     <div className="news">

@@ -15,30 +15,6 @@ export const TaskList = () => {
             })
     }
 
-    const uncompletedList = () => {
-        if (tasks) {
-            return <div onClick={() => {
-                fetch(`http://localhost:8088/tasks`, {
-                    method: "PATCH",
-                    body: JSON.stringify({
-                        completed: true
-                    }),
-                    headers: {
-                        "Content-Type": "application/json; charset=UTF-8",
-                    },
-                })
-                    .then(response => response.json())
-                    .then(() => {
-                        getAllTasks()
-                    })
-            }}>
-            </div>
-        }
-        else {
-            return ""
-        }
-    }
-
     useEffect(
         () => {
             fetch(`http://localhost:8088/tasks`)
@@ -50,22 +26,36 @@ export const TaskList = () => {
         []
     )
 
+    const markTaskComplete = (task) => {
+        fetch(`http://localhost:8088/tasks/${task}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                completed: true
+            }),
+        })
+            .then(response => response.json())
+            .then(() => {
+                getAllTasks()
+            })
+
+    }
+
     return <>
 
-        <button onClick={() => navigate("task/create")}>Add New Task</button>
+        <button onClick={() => navigate("task/create")}>New Task</button>
 
         <article className="tasks">
             {
-                tasks.map(
+                tasks.filter(task => task.completed === false).map(
                     (task) => {
                         return <section className="task">
                             <header>{task.taskName}<br></br>
                                 Estimated Completion Date: {task.dueDate}</header>
                             <label htmlFor="name">Completed:</label>
-                            <input type="checkbox" value="checked"></input>
-                            {
-                                uncompletedList()
-                            }
+                            <input onChange={() => markTaskComplete(task.id)} type="checkbox" checked={task.completed}></input>
                         </section>
                     }
                 )
