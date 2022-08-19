@@ -35,61 +35,36 @@
       "synopsis": "Yeah, it's 8:00. Hey, McFly, I thought I told you never to come in here.",
       "URL": "https://en.wikipedia.org/wiki/Back_to_the_Future",
       "userId": 3
-    },
-    {
-      "userId": 1,
-      "articleName": "asdfsadfasdf",
-      "synopsis": "asdfasdfasdf",
-      "URL": "asdfasdfasdf",
-      "id": 3
     }
   ],
   "events": [
     {
       "id": 1,
       "eventName": "Hot Dog Festival",
-      "eventDate": "1664377945",
+      "eventDate": "09-28-2022",
       "location": "Huntington",
-      "userId": 1,
-      "next": false
+      "userId": 1
     },
     {
       "id": 2,
       "eventName": "River Rafting Extravaganza",
-      "eventDate": "1664896345",
+      "eventDate": "10-04-2022",
       "location": "Summersville",
-      "userId": 3,
-      "next": false
+      "userId": 3
     },
     {
       "id": 3,
       "eventName": "Train Days",
-      "eventDate": "1668183145",
+      "eventDate": "11-11-2022",
       "location": "Beckley",
-      "userId": 4,
-      "next": false
+      "userId": 4
     },
     {
       "id": 4,
       "eventName": "Bonnaroo",
-      "eventDate": "1685632345",
+      "eventDate": "06-18-2023",
       "location": "Manchester",
-      "userId": 2,
-      "next": false
-    },
-    {
-      "userId": 1,
-      "eventName": "Meeting",
-      "eventDate": "05/05/2025",
-      "location": "on zoom",
-      "id": 6
-    },
-    {
-      "userId": 1,
-      "eventName": "Conference",
-      "eventDate": "01/02/2025",
-      "location": "Convention Center",
-      "id": 9
+      "userId": 2
     }
   ],
   "tasks": [
@@ -112,14 +87,21 @@
       "userId": 4,
       "taskName": "Chicken Stretching",
       "dueDate": "12-25-1999",
-      "completed": true
+      "completed": false
     },
     {
       "userId": 3,
       "taskName": "Get turnt up",
       "dueDate": "asap",
-      "completed": null,
+      "completed": false,
       "id": 4
+    },
+    {
+      "userId": 3,
+      "taskName": "Task it up",
+      "dueDate": "you tell me",
+      "completed": false,
+      "id": 5
     }
   ],
   "messages": [
